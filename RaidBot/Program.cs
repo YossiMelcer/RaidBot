@@ -21,6 +21,7 @@ namespace RaidBot {
             WebSocketProvider = Discord.Net.Providers.WS4Net.WS4NetProvider.Instance
          });
          _commandService = new CommandService();
+            //test comment
 #if DEBUG
          string token = ConfigVariables.DebugToken;
 #else
