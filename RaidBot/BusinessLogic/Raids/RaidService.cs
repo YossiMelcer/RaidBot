@@ -540,7 +540,7 @@ namespace RaidBot.BusinessLogic.Raids {
 
             result.Success = true;
             result.RequesterUserBuilder = EmbedBuilderHelper.BlueBuilder();
-            result.RequesterUserBuilder.WithThumbnailUrl(string.Format(ConfigVariables.PokemonIconURL, raid.RaidBossId));
+            result.RequesterUserBuilder.WithThumbnailUrl(string.Format(PokemonUrlHelpers.getPokemonUrl(raid.RaidBossId), raid.RaidBossId)); 
             result.RequesterUserBuilder.AddField(x => {
                x.Name = $"Raid: {raid.ToString()}";
                x.Value = raid.ToStringUsers();
